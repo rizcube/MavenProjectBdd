@@ -42,7 +42,7 @@ public class stepDefinition extends Utils{
 	public void add_Place_Payload_with(String name, String language, String address) throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
 		res = given().spec(requestSpecification())
-				.body(data.addPlacePayLoad());
+				.body(data.addPlacePayLoad(name, language, address));
 	}
 
 	
