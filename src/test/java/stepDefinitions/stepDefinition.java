@@ -12,6 +12,7 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -76,9 +77,12 @@ public class stepDefinition {
 	   
 	}
 	@Then("{string} in response body is {string}")
-	public void in_response_body_is(String string, String string2) {
+	public void in_response_body_is(String keyValue, String Expectedvalue) {
 	    // Write code here that turns the phrase above into concrete actions
-	    System.out.println(string2);
+	    String resp = response.asString();
+	    JsonPath js = new JsonPath(resp);
+	    assertEquals(js.get(keyValue).toString(),Expectedvalue);
+	    
 	}
 
 	
