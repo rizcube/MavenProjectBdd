@@ -16,18 +16,18 @@ Body:
         "lng": 33.427362
     },
     "accuracy": 50,
-    "name": "Princess Castle 3",
+    "name": "namee",
     "phone_number": "(+91) 983 893 3937",
-    "address": "Spiritual Landing place",
+    "address": "addressee",
     "types": [
         "shoe park",
         "shop"
     ],
     "website": "https://www.google.com",
-    "language": "French-IN"
+    "language": "languagee"
 }
 HTTP/1.1 200 OK
-Date: Thu, 18 Jun 2020 09:40:43 GMT
+Date: Thu, 18 Jun 2020 12:03:32 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,8 +40,8 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "8b1cbb107b406dcd04833e41547796af",
+    "place_id": "c34005da0de93617a2c3620f304bfdcd",
     "scope": "APP",
-    "reference": "c4070a0a9301cdf20c74922b2c3737c7c4070a0a9301cdf20c74922b2c3737c7",
-    "id": "c4070a0a9301cdf20c74922b2c3737c7"
+    "reference": "4a3fffbfc09e80d9861c63620314d34a4a3fffbfc09e80d9861c63620314d34a",
+    "id": "4a3fffbfc09e80d9861c63620314d34a"
 }

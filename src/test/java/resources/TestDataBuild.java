@@ -8,15 +8,15 @@ import pojo.Location;
 
 public class TestDataBuild {
 	
-	public AddPlace addPlacePayLoad() 
+	public AddPlace addPlacePayLoad(String name ,String address, String language) 
 	{
 		AddPlace p = new AddPlace();
 		p.setAccuracy(50);
-		p.setName("Princess Castle 3");
+		p.setName(name);
 		p.setPhone_number("(+91) 983 893 3937");
-		p.setAddress("Spiritual Landing place");
+		p.setAddress(address);
 		p.setWebsite("https://www.google.com");
-		p.setLanguage("French-IN");
+		p.setLanguage(language);
 		
 		
 	// types is a list so we have to create a list object first
