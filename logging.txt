@@ -1,0 +1,47 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": 0.0,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "Princess Castle 3",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Spiritual Landing place",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "https://www.google.com",
+    "language": "French-IN"
+}
+HTTP/1.1 200 OK
+Date: Thu, 18 Jun 2020 09:40:43 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "8b1cbb107b406dcd04833e41547796af",
+    "scope": "APP",
+    "reference": "c4070a0a9301cdf20c74922b2c3737c7c4070a0a9301cdf20c74922b2c3737c7",
+    "id": "c4070a0a9301cdf20c74922b2c3737c7"
+}
