@@ -30,10 +30,7 @@ public class stepDefinition extends Utils{
 	
 	@Given("Add Place Payload")
 	public void add_Place_Payload() {
-	    // Write code here that turns the phrase above into concrete actions
-	
-		
-		
+	    // Write code here that turns the phrase above into concrete actions	
 		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 		res = given().spec(requestSpecification())
 		.body(data.addPlacePayLoad());
