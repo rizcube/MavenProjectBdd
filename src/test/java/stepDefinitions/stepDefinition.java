@@ -19,8 +19,9 @@ import io.restassured.specification.ResponseSpecification;
 import pojo.AddPlace;
 import pojo.Location;
 import resources.TestDataBuild;
+import resources.Utils;
 
-public class stepDefinition {
+public class stepDefinition extends Utils{
 	RequestSpecification res;
 	ResponseSpecification resspec;
 	Response response;
@@ -30,17 +31,11 @@ public class stepDefinition {
 	@Given("Add Place Payload")
 	public void add_Place_Payload() {
 	    // Write code here that turns the phrase above into concrete actions
-		RestAssured.baseURI = "https://rahulshettyacademy.com";
-		
-		
-		
-		// set is used for setting parameters
-		RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
-		.setContentType(ContentType.JSON).build();
+	
 		
 		
 		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-		res = given().spec(req)
+		res = given().spec(requestSpecification())
 		.body(data.addPlacePayLoad());
 		
 	}
