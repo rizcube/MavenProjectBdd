@@ -16,18 +16,18 @@ Body:
         "lng": 33.427362
     },
     "accuracy": 50,
-    "name": "namee",
+    "name": "A2 House",
     "phone_number": "(+91) 983 893 3937",
-    "address": "addressee",
+    "address": "Beyond this world stage 2",
     "types": [
         "shoe park",
         "shop"
     ],
     "website": "https://www.google.com",
-    "language": "languagee"
+    "language": "Arabic"
 }
 HTTP/1.1 200 OK
-Date: Thu, 18 Jun 2020 12:03:32 GMT
+Date: Thu, 18 Jun 2020 12:46:44 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,8 +40,8 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "c34005da0de93617a2c3620f304bfdcd",
+    "place_id": "bc724dcdd3efa3c7739b9794ba5f8d96",
     "scope": "APP",
-    "reference": "4a3fffbfc09e80d9861c63620314d34a4a3fffbfc09e80d9861c63620314d34a",
-    "id": "4a3fffbfc09e80d9861c63620314d34a"
+    "reference": "fa1b81bf85305850b417a563736d4b30fa1b81bf85305850b417a563736d4b30",
+    "id": "fa1b81bf85305850b417a563736d4b30"
 }

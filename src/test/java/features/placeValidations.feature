@@ -8,5 +8,6 @@ And "status" in response body is "OK"
 And "scope" in response body is "APP"
 
 Examples:
-	|name 		| language | address  		   |
-	|A1 House	| English  | Beyond this world |
+	|name 		| language | address  		   		  |
+	|A1 House	| English  | Beyond this world 		  |
+	|A2 House	| Arabic   | Beyond this world stage 2|

@@ -8,7 +8,7 @@ import pojo.Location;
 
 public class TestDataBuild {
 	
-	public AddPlace addPlacePayLoad(String name ,String address, String language) 
+	public AddPlace addPlacePayLoad(String name ,String language, String address) 
 	{
 		AddPlace p = new AddPlace();
 		p.setAccuracy(50);
