@@ -18,12 +18,13 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import pojo.AddPlace;
 import pojo.Location;
+import resources.TestDataBuild;
 
 public class stepDefinition {
 	RequestSpecification res;
 	ResponseSpecification resspec;
 	Response response;
-	
+	TestDataBuild data = new TestDataBuild();
 	
 	
 	@Given("Add Place Payload")
@@ -40,7 +41,7 @@ public class stepDefinition {
 		
 		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 		res = given().spec(req)
-		.body(p);
+		.body(data.addPlacePayLoad());
 		
 	}
 	
