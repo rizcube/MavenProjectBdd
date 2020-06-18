@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.given;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import static org.junit.Assert.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,13 +12,17 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import pojo.AddPlace;
 import pojo.Location;
 
 public class stepDefinition {
-
+	RequestSpecification res;
+	ResponseSpecification resspec;
+	Response response;
+	
 	@Given("Add Place Payload")
 	public void add_Place_Payload() {
 	    // Write code here that turns the phrase above into concrete actions
@@ -50,8 +54,8 @@ public class stepDefinition {
 		.setContentType(ContentType.JSON).build();
 		
 		
-		ResponseSpecification resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-		RequestSpecification res = given().spec(req)
+		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+		res = given().spec(req)
 		.body(p);
 		
 	}
@@ -59,14 +63,17 @@ public class stepDefinition {
 	@When("user calls {string} with Post http request")
 	public void user_calls_with_Post_http_request(String string) {
 	    // Write code here that turns the phrase above into concrete actions
-	    System.out.println(string);
+		response = res.when().post("/maps/api/place/add/json")
+				.then().spec(resspec).extract().response();
 	}
 
 
 	@Then("the API call got success with status code {int}")
 	public void the_API_call_got_success_with_status_code(Integer int1) {
 	    // Write code here that turns the phrase above into concrete actions
-	    System.out.println(int1);
+	   assertEquals(response.getStatusCode(),200);
+		
+	   
 	}
 	@Then("{string} in response body is {string}")
 	public void in_response_body_is(String string, String string2) {
