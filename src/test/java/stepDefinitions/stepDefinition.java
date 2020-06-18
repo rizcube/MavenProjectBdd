@@ -24,31 +24,14 @@ public class stepDefinition {
 	ResponseSpecification resspec;
 	Response response;
 	
+	
+	
 	@Given("Add Place Payload")
 	public void add_Place_Payload() {
 	    // Write code here that turns the phrase above into concrete actions
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		
-		AddPlace p = new AddPlace();
-		p.setAccuracy(50);
-		p.setName("Princess Castle 3");
-		p.setPhone_number("(+91) 983 893 3937");
-		p.setAddress("Spiritual Landing place");
-		p.setWebsite("https://www.google.com");
-		p.setLanguage("French-IN");
 		
-		
-	// types is a list so we have to create a list object first
-		List<String> myList = new ArrayList<String>();
-		myList.add("shoe park");
-		myList.add("shop");
-		p.setTypes(myList);
-		
-		Location l= new Location();
-		l.setLng(-38.383494);
-		l.setLng(33.427362);
-		
-		p.setLocation(l);
 		
 		// set is used for setting parameters
 		RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
