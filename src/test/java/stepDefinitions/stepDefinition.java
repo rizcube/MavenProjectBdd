@@ -52,6 +52,8 @@ public class stepDefinition extends Utils{
 	public void user_calls_with_Post_http_request(String resource, String method) {
 	    // Write code here that turns the phrase above into concrete actions
 		
+		System.out.println("resource is >"+resource +  " Method is > " + method);
+		
 		APIResources resourceAPI = APIResources.valueOf(resource);
 		System.out.println(resourceAPI.getResource());
 		System.out.println("URL is not printing");
@@ -82,7 +84,11 @@ public class stepDefinition extends Utils{
 	    System.out.println(resp);
 	 }
 
-
+	@Then("Verify place_Id created maps to {string} using {string}")
+	public void verify_place_Id_created_maps_to_using(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
+	    System.out.println("Place id needs to implement");
+	}
 	
 	
 	
