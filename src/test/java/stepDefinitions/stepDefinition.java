@@ -77,17 +77,21 @@ public class stepDefinition extends Utils{
 	@Then("{string} in response body is {string}")
 	public void in_response_body_is(String keyValue, String Expectedvalue) {
 	    // Write code here that turns the phrase above into concrete actions
-	    String resp = response.asString();
-	    js = new JsonPath(resp);
-	   
-	    assertEquals(js.get(keyValue).toString(),Expectedvalue);
-	    System.out.println(resp);
+	    
+	    assertEquals(getJsonPath(response,keyValue),Expectedvalue);
+	    
 	 }
 
 	@Then("Verify place_Id created maps to {string} using {string}")
-	public void verify_place_Id_created_maps_to_using(String string, String string2) {
-	    // Write code here that turns the phrase above into concrete actions
-	    System.out.println("Place id needs to implement");
+	public void verify_place_Id_created_maps_to_using(String expectedName, String resource) throws IOException {
+	    // prepare requestSpec (endpoint/baseurl/queryparameter/key etc)
+		String place_id = getJsonPath(response, "place_id");
+		res = given().spec(requestSpecification()).queryParam("place_id", place_id);
+		user_calls_with_Post_http_request(resource,"GET");
+	    System.out.println(resource + place_id);
+	    String actualName = getJsonPath(response, "name");
+	    System.out.println(actualName);
+	    assertEquals(actualName, expectedName);
 	}
 	
 	

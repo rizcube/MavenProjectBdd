@@ -11,3 +11,4 @@ import io.cucumber.junit.CucumberOptions;
 public class TestRunner {
 
 }
+// working as intended in 110. Removing Hardcoded resource details with Enum class Methods
