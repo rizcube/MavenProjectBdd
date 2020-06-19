@@ -20,6 +20,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import pojo.AddPlace;
 import pojo.Location;
+import resources.APIResources;
 import resources.TestDataBuild;
 import resources.Utils;
 
@@ -46,12 +47,20 @@ public class stepDefinition extends Utils{
 	}
 
 	
-	@When("user calls {string} with Post http request")
-	public void user_calls_with_Post_http_request(String string) {
+	@When("user calls {string} with {string} http request")
+	public void user_calls_with_Post_http_request(String resource, String method) {
 	    // Write code here that turns the phrase above into concrete actions
+		
+		APIResources resourceAPI = APIResources.valueOf(resource);
+		System.out.println(resourceAPI.getResource());
+		System.out.println("URL is not printing");
+		
 		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-		response = res.when().post("/maps/api/place/add/json")
-				.then().spec(resspec).extract().response();
+		if(method.equalsIgnoreCase("POST"))
+			response = res.when().post(resourceAPI.getResource());
+		else if(method.equalsIgnoreCase("GET"))
+			response = res.when().get(resourceAPI.getResource());
+			//.then().spec(resspec).extract().response();
 	}
 
 
