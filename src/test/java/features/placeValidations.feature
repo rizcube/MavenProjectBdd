@@ -12,5 +12,5 @@ And Verify place_Id created maps to "<name>" using "getPlaceAPI"
 Examples:
 	|name 		| language | address  		   		  |
 	|A1 House	| English  | Beyond this world 		  |
-	|A2 House	| Arabic   | Beyond this world stage 2|
+#	|A2 House	| Arabic   | Beyond this world stage 2|
 	

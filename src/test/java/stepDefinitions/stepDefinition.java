@@ -29,7 +29,7 @@ public class stepDefinition extends Utils{
 	ResponseSpecification resspec;
 	Response response;
 	TestDataBuild data = new TestDataBuild();
-	
+	String place_id;
 	/*
 	@Given("Add Place Payload")
 	public void add_Place_Payload() throws IOException {
@@ -76,10 +76,16 @@ public class stepDefinition extends Utils{
 	    // Write code here that turns the phrase above into concrete actions
 	    String resp = response.asString();
 	    JsonPath js = new JsonPath(resp);
+	    place_id = js.get("place_id");
 	    assertEquals(js.get(keyValue).toString(),Expectedvalue);
-	    
-	}
+	    System.out.println(resp);
+	 }
 
+	@And("^Verify place_Id created maps to \"([^\"]*)\" using \"([^\"]*)\"$")
+    public void verify_placeid_created_maps_to_something_using_something(String name, String strArg1, String strArg2) throws Throwable {
+        System.out.println("place id");
+    }
+	
 	
 	
 }
