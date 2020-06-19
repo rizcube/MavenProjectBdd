@@ -33,4 +33,11 @@ public class TestDataBuild {
 		return p;
 	}
 
+	
+	public String deletePlacePayload() 
+	{
+		return "{\\r\\n\\t\\\"place_id\\\": \\\"0308f36412496273b1c915ee2833156a\\\"\\r\\n}";
+	}
+	
+	
 }

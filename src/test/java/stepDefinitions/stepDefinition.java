@@ -94,6 +94,11 @@ public class stepDefinition extends Utils{
 	    assertEquals(actualName, expectedName);
 	}
 	
-	
+	@Given("DeletePlace Payload")
+	public void deleteplace_Payload() {
+	    // Write code here that turns the phrase above into concrete actions
+	    given()requestSpecification().body()
+	}
+
 	
 }
