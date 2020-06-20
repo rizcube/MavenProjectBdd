@@ -29,8 +29,9 @@ public class stepDefinition extends Utils{
 	ResponseSpecification resspec;
 	Response response;
 	TestDataBuild data = new TestDataBuild();
-	String place_id;
-	JsonPath js;
+	static String place_id;
+
+	
 	/*
 	@Given("Add Place Payload")
 	public void add_Place_Payload() throws IOException {
@@ -85,7 +86,7 @@ public class stepDefinition extends Utils{
 	@Then("Verify place_Id created maps to {string} using {string}")
 	public void verify_place_Id_created_maps_to_using(String expectedName, String resource) throws IOException {
 	    // prepare requestSpec (endpoint/baseurl/queryparameter/key etc)
-		String place_id = getJsonPath(response, "place_id");
+		place_id = getJsonPath(response, "place_id");
 		res = given().spec(requestSpecification()).queryParam("place_id", place_id);
 		user_calls_with_Post_http_request(resource,"GET");
 	    System.out.println(resource + place_id);
@@ -95,9 +96,10 @@ public class stepDefinition extends Utils{
 	}
 	
 	@Given("DeletePlace Payload")
-	public void deleteplace_Payload() {
+	public void deleteplace_Payload() throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
-	    given()requestSpecification().body()
+		System.out.println(data.deletePlacePayload("coming fro place Payload class" + place_id));
+	    res = given().spec(requestSpecification().body(data.deletePlacePayload(place_id)));
 	}
 
 	

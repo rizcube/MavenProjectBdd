@@ -27,7 +27,7 @@ Body:
     "language": "English"
 }
 HTTP/1.1 200 OK
-Date: Fri, 19 Jun 2020 14:40:00 GMT
+Date: Sat, 20 Jun 2020 07:08:00 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,17 +40,17 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "211701508af85ac359022454309bb53c",
+    "place_id": "c198776db8ffc04d93efc1f753fae6a2",
     "scope": "APP",
-    "reference": "d6990d730daffd915825a33bde3fc6cfd6990d730daffd915825a33bde3fc6cf",
-    "id": "d6990d730daffd915825a33bde3fc6cf"
+    "reference": "865c1ae77b641f3e4e6335c7ac4fbee8865c1ae77b641f3e4e6335c7ac4fbee8",
+    "id": "865c1ae77b641f3e4e6335c7ac4fbee8"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=211701508af85ac359022454309bb53c
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=c198776db8ffc04d93efc1f753fae6a2
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=211701508af85ac359022454309bb53c
+				place_id=c198776db8ffc04d93efc1f753fae6a2
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -59,7 +59,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Fri, 19 Jun 2020 14:40:03 GMT
+Date: Sat, 20 Jun 2020 07:08:02 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -83,3 +83,31 @@ Content-Type: application/json;charset=UTF-8
     "website": "https://www.google.com",
     "language": "English"
 }
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{\r\n\t\"place_id\": \"c198776db8ffc04d93efc1f753fae6a2\"\r\n}
+HTTP/1.1 200 OK
+Date: Sat, 20 Jun 2020 07:08:03 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 134
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+
+<br />
+<b>Notice</b>:  Trying to get property of non-object in <b>/var/www/maps/api/place/DeletePlace.php</b> on line <b>42</b><br />
+
